@@ -1,5 +1,5 @@
-import { useState } from "react"
 import axios from "axios";
+import { useState } from "react";
 
 function Weather()
 {
@@ -27,12 +27,12 @@ function Weather()
     }
     return(
         <>
-        <div className="bg-purple-500 p-20 ">
+        <div className="max-w-sm mx-auto  p-7 bg-gradient-to-r from-purple-400 to-purple-500 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 mt-32">
             <div className="bg-pink-400 p-10 rounded-md">
                 <h1 className="text-3xl">Weather Report</h1>
                 <p className="my-2 text-xl">I can give you a weather report about your city</p>
-                <input  value={city} onChange={handlecity} placeholder=" Enter city name" type="text" className="p-1 rounded-md border-black mt-2 block "></input>
-                <button onClick={getweather} className="bg-purple-400  p-2 rounded-md mt-2 ">Get Report</button>
+                <input  value={city} onChange={handlecity} className="w-full p-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-white" placeholder="Enter city name"></input>
+                <button onClick={getweather} className="bg-purple-400   hover:bg-purple-300 transition duration-300 p-2 rounded-md mt-2 ">Get Report</button>
                 <div className="mt-2  mb-3 p-2 ">
                     <h1><b>Weather:{weather}</b></h1>
                     <p><b>Temperature:{temp}</b></p>
